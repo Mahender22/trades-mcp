@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "trades-mcp": {
+      "command": "C:\\Users\\mahen\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "args": ["-m", "trades_mcp.src"],
+      "cwd": "C:\\GO-CRAZY\\trades-mcp",
+      "env": {
+        "TRADES_MCP_DEMO": "true",
+        "TRADES_MCP_TIER": "pro"
+      }
+    }
+  }
+}

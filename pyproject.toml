@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trades-mcp"
+version = "0.1.0"
+description = "MCP server for construction trades — contractor licenses, building permits, material pricing, and labor rates"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Professor LLC" }]
+dependencies = [
+    "fastmcp>=2.0.0",
+    "httpx>=0.27.0",
+    "beautifulsoup4>=4.12.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[project.scripts]
+trades-mcp = "trades_mcp.src.server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["trades_mcp/tests"]
+asyncio_mode = "auto"
