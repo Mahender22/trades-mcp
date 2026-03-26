@@ -10,34 +10,58 @@ Connect Claude, GPT, Cursor, or any MCP-compatible AI to real-time trades data. 
 
 ---
 
-## 30-Second Demo
+## See It In Action
 
-```
-You:  Check if California contractor license 1098765 is active
+### License Verification — ChatGPT says "invalid", TradesMCP gets it right
 
-TradesMCP:  California License #1098765 is Active.
+> *"Check if California contractor license 1098765 is active"*
 
-  Name:           Carlos J Martinez
-  Business:       Martinez & Sons General Contracting Inc
-  Classification: B — General Building Contractor
-  Status:         Active
-  Expires:        03/31/2027
-  Bond:           $25,000
-  Workers Comp:   State Compensation Ins Fund
+![License Lookup — Claude Code vs ChatGPT vs TradesMCP](docs/images/license-lookup.png)
 
-  The license is in good standing and valid through March 2027.
-```
+**Left:** Claude Code without MCP — can't parse the CSLB website, tells you to look it up manually. **Center:** ChatGPT — confidently says the license **does not exist** and is **"likely invalid"** (completely wrong). **Right:** Claude Code + TradesMCP — one tool call, correct answer with full details.
+
+> Wrong answers about contractor licenses can cause real harm. A homeowner trusting ChatGPT's response would reject a legitimate contractor.
+
+---
+
+### Permit Search — competitors give up, TradesMCP delivers
+
+> *"What permits were pulled at 1234 Maple Ave in Los Angeles and what is their inspection status?"*
+
+![Permit Search — Claude Code vs ChatGPT vs TradesMCP](docs/images/permit-search.png)
+
+**Left:** "Go look it up on LADBS yourself." **Center:** "I couldn't find anything, the address is probably wrong." **Right:** Full permit record — type, description, contractor, valuation, and inspection history with dates and pass/fail status.
+
+---
+
+### Labor Rates — one authoritative answer vs 10 conflicting numbers
+
+> *"What do electricians make per hour in San Francisco?"*
+
+![Labor Rates — Claude Code vs ChatGPT vs TradesMCP](docs/images/labor-rates.png)
+
+**Left:** Web scrapes ZipRecruiter, gives a range of $35-$55/hr from job postings. **Center:** Walls of text from Indeed/Payscale/Glassdoor with 6 different contradicting ranges. **Right:** One table — **$42.93/hr, $89,306/yr, source: Bureau of Labor Statistics (2025).**
+
+---
+
+### Compliance — clean table vs wall of text
+
+> *"What are the bond requirements for contractors in New York?"*
+
+![Bond Requirements — Claude Code vs ChatGPT vs TradesMCP](docs/images/bond-requirements.png)
+
+**Left:** Wall of text with 5 jurisdictions and ranges from $2,000-$25,000. **Center:** Emoji soup, multiple scrolling sections, a research paper. **Right:** One table. Four bond types. Exact amounts. Three bullet points.
+
+---
 
 ## Why TradesMCP?
 
 | | Without TradesMCP | With TradesMCP |
 |---|---|---|
-| Verify a contractor license | AI says *"go to cslb.ca.gov"* | **Instant lookup with full details** |
+| Verify a contractor license | AI says *"go to cslb.ca.gov"* or **gives wrong answer** | **Instant lookup with full details** |
 | Search building permits | AI says *"I can't access that"* | **Permit record + inspection history** |
 | Get electrician wages in SF | AI guesses from stale training data | **$42.93/hr — BLS 2025 data** |
 | Bond requirements in NY | AI gives a wall of vague text | **One clean table, exact amounts** |
-
-> **ChatGPT told a user that a valid California contractor license "does not exist" and is "likely invalid."** TradesMCP returned the correct answer in under a second. Wrong answers about contractor licenses can cause real harm.
 
 ## Quick Start
 
