@@ -1,0 +1,20 @@
+{
+  "_metadata": {
+    "description": "Regional cost multipliers relative to national average — update annually from BLS area wage data",
+    "last_updated": "2026-03-27",
+    "source": "Derived from BLS OEWS metro area wage differentials and RSMeans cost indices",
+    "update_frequency": "annually"
+  },
+  "san francisco": 1.45,
+  "new york": 1.40,
+  "boston": 1.30,
+  "los angeles": 1.25,
+  "seattle": 1.25,
+  "chicago": 1.15,
+  "denver": 1.10,
+  "miami": 1.05,
+  "dallas": 0.95,
+  "houston": 0.95,
+  "phoenix": 0.90,
+  "atlanta": 0.90
+}

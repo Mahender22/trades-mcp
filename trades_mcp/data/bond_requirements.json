@@ -1,0 +1,32 @@
+{
+  "_metadata": {
+    "description": "State bond requirements for contractors — update when state laws change",
+    "last_updated": "2026-03-27",
+    "source": "State licensing board regulations and surety bond industry data",
+    "update_frequency": "as laws change (check annually)"
+  },
+  "CA": {
+    "contractor_license_bond": "$25,000",
+    "bid_bond": "Typically 10% of bid amount for public works",
+    "performance_bond": "100% of contract amount for public works over $25,000",
+    "payment_bond": "Required for public works over $25,000"
+  },
+  "TX": {
+    "contractor_license_bond": "Varies by municipality and trade",
+    "bid_bond": "5-10% of bid amount for public works",
+    "performance_bond": "100% of contract for government projects",
+    "payment_bond": "Required for government projects over $25,000"
+  },
+  "FL": {
+    "contractor_license_bond": "Not required at state level; varies by county",
+    "bid_bond": "5% of bid amount typical",
+    "performance_bond": "Required for public works",
+    "payment_bond": "Required for public works over $200,000"
+  },
+  "NY": {
+    "contractor_license_bond": "$5,000 for NYC home improvement",
+    "bid_bond": "5-10% of bid for public works",
+    "performance_bond": "100% of contract for public works",
+    "payment_bond": "Required for public works over $100,000"
+  }
+}

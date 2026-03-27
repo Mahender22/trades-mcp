@@ -1,0 +1,32 @@
+{
+  "_metadata": {
+    "description": "State insurance requirements for contractors — update when state laws change",
+    "last_updated": "2026-03-27",
+    "source": "State licensing board regulations and state labor department requirements",
+    "update_frequency": "as laws change (check annually)"
+  },
+  "CA": {
+    "workers_comp": "Required for all employers (no minimum employees)",
+    "general_liability": "Not required by state, but strongly recommended",
+    "bond": "$25,000 contractor license bond required (increasing to $25,000 in 2026)",
+    "notes": "Workers comp exempt if sole owner with no employees — must file exemption certificate"
+  },
+  "TX": {
+    "workers_comp": "Not required by state, but recommended. Required for government contracts.",
+    "general_liability": "Not required by state",
+    "bond": "Varies by trade and municipality",
+    "notes": "Texas is one of few states where workers comp is optional for private employers"
+  },
+  "FL": {
+    "workers_comp": "Required for employers with 1+ employees (construction)",
+    "general_liability": "Not required by state, but often required by clients",
+    "bond": "Varies; some local jurisdictions require performance bonds",
+    "notes": "Construction industry has stricter workers comp rules than other industries"
+  },
+  "NY": {
+    "workers_comp": "Required for all employers",
+    "general_liability": "Required for NYC home improvement contractors",
+    "bond": "NYC requires $5,000 bond for home improvement contractors",
+    "notes": "NYC licensing is separate from state; requires both workers comp and disability insurance"
+  }
+}

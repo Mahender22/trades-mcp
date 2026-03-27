@@ -193,11 +193,11 @@ TradesMCP works with any MCP-compatible client. Add the `trades-mcp` command to 
 
 ## Coverage
 
-### States
+### States (All Live)
 - **California** (CSLB) — live scraping, 2026 rule changes tracked
-- **Texas** (TDLR) — lookup guidance + demo data
-- **Florida** (DBPR) — lookup guidance + demo data
-- **New York** (DOS/DCA) — lookup guidance + demo data
+- **Texas** (TDLR) — Socrata REST API, 958K+ records
+- **Florida** (DBPR) — live scraping with session management
+- **New York** (NYC Open Data + DOB BIS) — live API + scraping
 
 > These 4 states cover ~65% of US contractor license demand.
 
@@ -220,6 +220,22 @@ San Francisco, New York, Los Angeles, Boston, Seattle, Chicago, Denver, Miami, D
 
 Your data stays on your machine. TradesMCP runs locally and connects directly to public APIs and licensing boards.
 
+## Data Sources & Freshness
+
+| Data | Source | How It's Fetched | Update Frequency |
+|------|--------|-----------------|------------------|
+| **CA licenses** | CSLB website | Live scraping | Real-time |
+| **TX licenses** | data.texas.gov Socrata API | Live API call | Real-time (958K+ records) |
+| **FL licenses** | MyFloridaLicense.com | Live scraping | Real-time |
+| **NY licenses** | NYC Open Data + DOB BIS | Live API + scraping | Real-time |
+| **Labor rates** | Bureau of Labor Statistics API | Live API call | Real-time (BLS updates annually) |
+| **Material prices** | Industry averages (retailers, distributors) | Local JSON data file | Updated monthly |
+| **Regional multipliers** | BLS area wage data + RSMeans | Local JSON data file | Updated annually |
+| **Insurance/bond requirements** | State licensing board regulations | Local JSON data file | Updated as laws change |
+| **Project cost estimates** | HomeAdvisor, Angi, RSMeans | Local JSON data file | Updated annually |
+
+License verification and labor rates are **live** — every query hits the real data source. Material prices and compliance data are stored in `trades_mcp/data/` as JSON files with `last_updated` timestamps, making them easy to update without code changes.
+
 ## Pricing
 
 | | Starter | Pro |
@@ -235,6 +251,28 @@ Your data stays on your machine. TradesMCP runs locally and connects directly to
 
 *Less than the cost of one material price lookup service. Pays for itself the first time it saves you from hiring an unlicensed contractor.*
 
+## Keeping Data Fresh
+
+Labor rates and regional multipliers can be updated automatically from the BLS API:
+
+```bash
+# Update everything (labor rates, regional multipliers, material price review)
+python scripts/update_data.py
+
+# Update only labor rates
+python scripts/update_data.py --only labor
+
+# Update only regional multipliers
+python scripts/update_data.py --only multipliers
+
+# With a BLS API key for higher rate limits
+python scripts/update_data.py --bls-key YOUR_KEY
+```
+
+Material prices require manual updates (no free public API exists). The script shows current prices and tells you where to check for updates.
+
+Schedule it monthly via cron or Task Scheduler to keep data current.
+
 ## Development
 
 ```bash
@@ -243,7 +281,7 @@ git clone https://github.com/Mahender22/trades-mcp.git
 cd trades-mcp
 pip install -e ".[dev]"
 
-# Run tests (53 passing)
+# Run tests (68 passing)
 pytest -v
 
 # Run server locally

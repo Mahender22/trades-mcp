@@ -1,7 +1,21 @@
 """Data models for trades MCP server."""
 
+import json
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Optional
+
+
+DATA_DIR = Path(__file__).parent.parent / "data"
+
+
+def _load_json(filename: str) -> dict:
+    """Load a JSON data file from the data/ directory."""
+    path = DATA_DIR / filename
+    with open(path, "r") as f:
+        data = json.load(f)
+    data.pop("_metadata", None)
+    return data
 
 
 @dataclass
@@ -157,58 +171,6 @@ LICENSE_CLASSIFICATIONS = {
     "ASB": "Asbestos Certification",
 }
 
-# Insurance requirements by state
-INSURANCE_REQUIREMENTS = {
-    "CA": {
-        "workers_comp": "Required for all employers (no minimum employees)",
-        "general_liability": "Not required by state, but strongly recommended",
-        "bond": "$25,000 contractor license bond required (increasing to $25,000 in 2026)",
-        "notes": "Workers comp exempt if sole owner with no employees — must file exemption certificate",
-    },
-    "TX": {
-        "workers_comp": "Not required by state, but recommended. Required for government contracts.",
-        "general_liability": "Not required by state",
-        "bond": "Varies by trade and municipality",
-        "notes": "Texas is one of few states where workers comp is optional for private employers",
-    },
-    "FL": {
-        "workers_comp": "Required for employers with 1+ employees (construction)",
-        "general_liability": "Not required by state, but often required by clients",
-        "bond": "Varies; some local jurisdictions require performance bonds",
-        "notes": "Construction industry has stricter workers comp rules than other industries",
-    },
-    "NY": {
-        "workers_comp": "Required for all employers",
-        "general_liability": "Required for NYC home improvement contractors",
-        "bond": "NYC requires $5,000 bond for home improvement contractors",
-        "notes": "NYC licensing is separate from state; requires both workers comp and disability insurance",
-    },
-}
-
-# Bond requirements
-BOND_REQUIREMENTS = {
-    "CA": {
-        "contractor_license_bond": "$25,000",
-        "bid_bond": "Typically 10% of bid amount for public works",
-        "performance_bond": "100% of contract amount for public works over $25,000",
-        "payment_bond": "Required for public works over $25,000",
-    },
-    "TX": {
-        "contractor_license_bond": "Varies by municipality and trade",
-        "bid_bond": "5-10% of bid amount for public works",
-        "performance_bond": "100% of contract for government projects",
-        "payment_bond": "Required for government projects over $25,000",
-    },
-    "FL": {
-        "contractor_license_bond": "Not required at state level; varies by county",
-        "bid_bond": "5% of bid amount typical",
-        "performance_bond": "Required for public works",
-        "payment_bond": "Required for public works over $200,000",
-    },
-    "NY": {
-        "contractor_license_bond": "$5,000 for NYC home improvement",
-        "bid_bond": "5-10% of bid for public works",
-        "performance_bond": "100% of contract for public works",
-        "payment_bond": "Required for public works over $100,000",
-    },
-}
+# Insurance and bond requirements — loaded from JSON data files
+INSURANCE_REQUIREMENTS = _load_json("insurance_requirements.json")
+BOND_REQUIREMENTS = _load_json("bond_requirements.json")

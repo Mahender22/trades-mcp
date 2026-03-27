@@ -1,0 +1,148 @@
+{
+  "_metadata": {
+    "description": "Construction material pricing — update monthly from supplier catalogs or pricing APIs",
+    "last_updated": "2026-03-27",
+    "source": "Industry averages from major retailers and distributor pricing",
+    "update_frequency": "monthly"
+  },
+  "lumber_2x4": {
+    "material": "Lumber (2x4x8 Stud Grade)",
+    "unit": "per piece",
+    "price": 3.98,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "lumber_2x6": {
+    "material": "Lumber (2x6x8 #2)",
+    "unit": "per piece",
+    "price": 6.48,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "plywood_4x8": {
+    "material": "Plywood (4x8 3/4\" CDX)",
+    "unit": "per sheet",
+    "price": 42.00,
+    "price_trend": "down",
+    "last_updated": "2026-03"
+  },
+  "osb_4x8": {
+    "material": "OSB (4x8 7/16\")",
+    "unit": "per sheet",
+    "price": 18.50,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "copper_pipe_1_2": {
+    "material": "Copper Pipe (1/2\" Type M, 10ft)",
+    "unit": "per piece",
+    "price": 12.80,
+    "price_trend": "up",
+    "last_updated": "2026-03"
+  },
+  "copper_pipe_3_4": {
+    "material": "Copper Pipe (3/4\" Type M, 10ft)",
+    "unit": "per piece",
+    "price": 22.50,
+    "price_trend": "up",
+    "last_updated": "2026-03"
+  },
+  "pvc_pipe_2": {
+    "material": "PVC Pipe (2\" Schedule 40, 10ft)",
+    "unit": "per piece",
+    "price": 6.98,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "pvc_pipe_4": {
+    "material": "PVC Pipe (4\" Schedule 40, 10ft)",
+    "unit": "per piece",
+    "price": 14.50,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "romex_14_2": {
+    "material": "Romex Wire (14/2 NM-B, 250ft)",
+    "unit": "per roll",
+    "price": 75.00,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "romex_12_2": {
+    "material": "Romex Wire (12/2 NM-B, 250ft)",
+    "unit": "per roll",
+    "price": 98.00,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "concrete_60lb": {
+    "material": "Concrete Mix (60lb bag)",
+    "unit": "per bag",
+    "price": 5.48,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "concrete_ready_mix": {
+    "material": "Ready-Mix Concrete",
+    "unit": "per cubic yard",
+    "price": 165.00,
+    "price_trend": "up",
+    "last_updated": "2026-03"
+  },
+  "drywall_4x8": {
+    "material": "Drywall (4x8 1/2\" Regular)",
+    "unit": "per sheet",
+    "price": 12.50,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "insulation_r13": {
+    "material": "Fiberglass Insulation (R-13, 15\" x 32ft)",
+    "unit": "per roll",
+    "price": 22.00,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "insulation_r30": {
+    "material": "Fiberglass Insulation (R-30, 15\" x 25ft)",
+    "unit": "per roll",
+    "price": 42.00,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "shingle_architectural": {
+    "material": "Architectural Shingles (per bundle, ~33 sq ft)",
+    "unit": "per bundle",
+    "price": 36.00,
+    "price_trend": "up",
+    "last_updated": "2026-03"
+  },
+  "paint_interior_gallon": {
+    "material": "Interior Paint (Premium, 1 gallon)",
+    "unit": "per gallon",
+    "price": 45.00,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "paint_exterior_gallon": {
+    "material": "Exterior Paint (Premium, 1 gallon)",
+    "unit": "per gallon",
+    "price": 55.00,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "rebar_no4": {
+    "material": "Rebar (#4, 1/2\", 20ft)",
+    "unit": "per piece",
+    "price": 12.00,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  },
+  "hvac_unit_3ton": {
+    "material": "Central AC Unit (3-ton, 14 SEER)",
+    "unit": "per unit",
+    "price": 3200.00,
+    "price_trend": "stable",
+    "last_updated": "2026-03"
+  }
+}

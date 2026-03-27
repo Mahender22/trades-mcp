@@ -1,0 +1,20 @@
+{
+  "_metadata": {
+    "description": "Fallback labor rates when BLS API is unavailable — update annually from BLS OEWS releases",
+    "last_updated": "2026-03-27",
+    "source": "Bureau of Labor Statistics, Occupational Employment and Wage Statistics (May 2025)",
+    "update_frequency": "annually (BLS releases May data in March of following year)"
+  },
+  "electrician": {"trade": "Electrician", "region": "National Average", "hourly_rate": 29.61, "annual_salary": 61590, "period": "2025"},
+  "plumber": {"trade": "Plumber", "region": "National Average", "hourly_rate": 30.46, "annual_salary": 63350, "period": "2025"},
+  "hvac": {"trade": "HVAC Technician", "region": "National Average", "hourly_rate": 27.01, "annual_salary": 56180, "period": "2025"},
+  "carpenter": {"trade": "Carpenter", "region": "National Average", "hourly_rate": 26.43, "annual_salary": 54960, "period": "2025"},
+  "painter": {"trade": "Painter", "region": "National Average", "hourly_rate": 22.37, "annual_salary": 46530, "period": "2025"},
+  "roofer": {"trade": "Roofer", "region": "National Average", "hourly_rate": 23.73, "annual_salary": 49360, "period": "2025"},
+  "mason": {"trade": "Mason", "region": "National Average", "hourly_rate": 28.27, "annual_salary": 58810, "period": "2025"},
+  "welder": {"trade": "Welder", "region": "National Average", "hourly_rate": 23.09, "annual_salary": 48030, "period": "2025"},
+  "general_contractor": {"trade": "General Contractor (Supervisor)", "region": "National Average", "hourly_rate": 37.14, "annual_salary": 77260, "period": "2025"},
+  "sheet_metal": {"trade": "Sheet Metal Worker", "region": "National Average", "hourly_rate": 28.79, "annual_salary": 59890, "period": "2025"},
+  "insulation": {"trade": "Insulation Worker", "region": "National Average", "hourly_rate": 24.10, "annual_salary": 50130, "period": "2025"},
+  "concrete": {"trade": "Concrete Finisher", "region": "National Average", "hourly_rate": 24.42, "annual_salary": 50800, "period": "2025"}
+}

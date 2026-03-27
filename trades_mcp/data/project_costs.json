@@ -1,0 +1,23 @@
+{
+  "_metadata": {
+    "description": "Per-square-foot cost ranges by project type (national average) — update annually",
+    "last_updated": "2026-03-27",
+    "source": "HomeAdvisor, Angi, RSMeans, and contractor survey data",
+    "update_frequency": "annually"
+  },
+  "kitchen_remodel": {"low": 75, "mid": 150, "high": 250, "label": "Kitchen Remodel"},
+  "bathroom_remodel": {"low": 100, "mid": 200, "high": 350, "label": "Bathroom Remodel"},
+  "addition": {"low": 100, "mid": 200, "high": 400, "label": "Room Addition"},
+  "new_construction": {"low": 150, "mid": 250, "high": 500, "label": "New Construction"},
+  "roof_replacement": {"low": 5, "mid": 10, "high": 20, "label": "Roof Replacement"},
+  "painting_interior": {"low": 2, "mid": 4, "high": 7, "label": "Interior Painting"},
+  "painting_exterior": {"low": 3, "mid": 5, "high": 10, "label": "Exterior Painting"},
+  "flooring": {"low": 6, "mid": 12, "high": 25, "label": "Flooring Installation"},
+  "electrical_rewire": {"low": 6, "mid": 10, "high": 18, "label": "Electrical Rewire"},
+  "plumbing_repipe": {"low": 5, "mid": 10, "high": 20, "label": "Plumbing Repipe"},
+  "hvac_install": {"low": 12, "mid": 20, "high": 35, "label": "HVAC Installation"},
+  "deck": {"low": 15, "mid": 35, "high": 75, "label": "Deck Construction"},
+  "fence": {"low": 15, "mid": 30, "high": 60, "label": "Fence Installation (per linear ft)"},
+  "concrete_driveway": {"low": 8, "mid": 12, "high": 18, "label": "Concrete Driveway"},
+  "landscaping": {"low": 5, "mid": 15, "high": 40, "label": "Landscaping"}
+}
